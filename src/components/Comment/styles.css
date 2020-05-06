@@ -1,0 +1,12 @@
+.comment {
+  display: flex;
+  padding-top: 25px;
+  border-top: 2px solid #EFEFEF;
+}
+
+.comment p {
+  width: 100%;
+  padding: 10px;
+  background: #EFEFEF;
+  border-radius: 10px;
+}
