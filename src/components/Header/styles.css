@@ -14,7 +14,7 @@ header span {
 
 header .perfil {
   margin-right: 50px;
-  min-width: 150px;
+  width: 140px;
   display: flex;
   align-items: center;
   justify-content: space-between;

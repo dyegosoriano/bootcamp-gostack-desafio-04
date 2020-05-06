@@ -3,10 +3,13 @@ import React from 'react'
 import './styles.css'
 
 function Comment ({ comment }) {
+  const { author, content } = comment
+  const { avatar, name } = author
+
   return (
     <div className='comment'>
-      <img src={comment.author.avatar}/>
-      <p><strong>{comment.author.name}</strong> {comment.content}</p>
+      <img src={avatar} alt={`Foto de ${name}`}/>
+      <p><strong>{name}</strong> {content}</p>
     </div>
   )
 }

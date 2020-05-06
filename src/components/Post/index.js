@@ -4,19 +4,22 @@ import Coment from '../Comment'
 import './styles.css'
 
 function Post ({ data }) {
+  const { author, date, content, comments } = data
+  const { avatar, name } = author
+
   return (
     <div className='post'>
       <div className='post__header'>
-        <img src={data.author.avatar} alt={'Foto de ' + data.author.name}/>
+        <img src={avatar} alt={'Foto de ' + name}/>
         <div>
-          <span className='name'>{data.author.name}</span>
-          <time>{data.date}</time>
+          <span className='name'>{name}</span>
+          <time>{date}</time>
         </div>
       </div>
 
-      <p className='content'>{data.content}</p>
+      <p className='content'>{content}</p>
 
-      {data.comments.map(comment => <Coment key={comment.id} comment={comment}/>)}
+      {comments.map(comment => <Coment key={comment.id} comment={comment}/>)}
     </div>
   )
 }
